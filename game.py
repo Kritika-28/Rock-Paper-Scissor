@@ -1,7 +1,4 @@
-# game.py (for browser via Brython)
-
-from browser import document
-import random
+from browser import document, window
 
 rock = '''
     _______
@@ -34,14 +31,12 @@ game_images = [rock, paper, scissors]
 
 def play_game(event):
     user = int(event.target.value)
-    computer_choice = random.randint(0, 2)
+    computer_choice = int(window.Math.floor(window.Math.random() * 3))
 
     output = f"\nYour choice:\n{game_images[user]}\n"
     output += f"Computer's choice:\n{game_images[computer_choice]}\n"
 
-    if user > 2 or user < 0:
-        output += "Invalid input. Please try again."
-    elif user == computer_choice:
+    if user == computer_choice:
         output += "It is a Tie!!!!"
     elif (user == 0 and computer_choice == 2) or \
          (user == 2 and computer_choice == 1) or \
