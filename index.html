@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js"></script>
+  <style>
+    body {
+      font-family: Consolas, monospace;
+      background: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+    pre {
+      white-space: pre-wrap;
+      background: black;
+      color: lime;
+      padding: 15px;
+      border-radius: 8px;
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body onload="brython()">
+  <h1>Rock Paper Scissors</h1>
+  <p>Choose your weapon:</p>
+  <button id="rock" value="0">🪨 Rock</button>
+  <button id="paper" value="1">📄 Paper</button>
+  <button id="scissors" value="2">✂️ Scissors</button>
 
+  <pre id="output">>>> Let's play!</pre>
+
+  <script type="text/python" src="game.py"></script>
+</body>
+</html>
